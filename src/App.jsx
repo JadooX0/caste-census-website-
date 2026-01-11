@@ -30,7 +30,7 @@ const App = () => {
   return (
     <div className="flex min-h-screen bg-[#F8FAFC] text-[#1E293B] font-sans">
       
-      {/* SIDEBAR */}
+      
       <aside className="w-72 bg-white border-r border-slate-200 p-8 flex flex-col sticky top-0 h-screen">
         <div className="flex items-center gap-3 mb-12">
           <div className="bg-blue-600 p-2 rounded-xl shadow-lg shadow-blue-200">
@@ -55,7 +55,7 @@ const App = () => {
         </div>
       </aside>
 
-      {/* MAIN CONTENT */}
+      
       <main className="flex-1 p-12">
         <div className="max-w-5xl mx-auto">
           
@@ -70,7 +70,7 @@ const App = () => {
             </div>
           </div>
 
-          {/* Stepper */}
+          
           {!isAddingMember && (
             <div className="grid grid-cols-5 gap-4 mb-8 animate-in fade-in duration-300">
               <StepperItem number="01" label="Info" active={step === 1} done={step > 1} />
@@ -81,11 +81,11 @@ const App = () => {
             </div>
           )}
 
-          {/* Main Card Container */}
+          
           <div className="bg-white rounded-[32px] shadow-xl shadow-slate-200/50 border border-slate-200/60 overflow-hidden min-h-[540px] flex flex-col">
             <div className="p-10 flex-1">
               
-              {/* STEP 1: PERSONAL INFO */}
+              
               {step === 1 && (
                 <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                   <h2 className="text-2xl font-bold mb-2">Personal Details</h2>
@@ -100,7 +100,7 @@ const App = () => {
                 </div>
               )}
 
-              {/* STEP 2: ID UPLOAD */}
+              
               {step === 2 && (
                 <div className="animate-in slide-in-from-right duration-500 max-w-2xl mx-auto text-center">
                   <h2 className="text-2xl font-bold mb-2 tracking-tight text-slate-800">Verify Identity</h2>
@@ -117,7 +117,7 @@ const App = () => {
                 </div>
               )}
 
-              {/* STEP 3: HOUSEHOLD / ADD MEMBER (DYNAMIC) */}
+              
               {step === 3 && (
                 <div className="animate-in slide-in-from-right duration-500">
                   {!isAddingMember ? (
@@ -135,7 +135,7 @@ const App = () => {
                         </button>
                       </div>
                       
-                      {/* Grid of added members */}
+                      
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="p-6 bg-slate-50 border-2 border-blue-100 rounded-[28px] flex items-center gap-4">
                           <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-100">
@@ -161,7 +161,7 @@ const App = () => {
                       </div>
                     </>
                   ) : (
-                    /* ADD FAMILY MEMBER INTERFACE */
+                    
                     <div className="animate-in slide-in-from-bottom-4 duration-500 max-w-2xl mx-auto">
                       <button onClick={() => setIsAddingMember(false)} className="flex items-center gap-2 text-slate-400 font-bold text-sm mb-6 hover:text-slate-800">
                         <ArrowLeft size={16}/> Cancel and Return
@@ -184,7 +184,7 @@ const App = () => {
                             <InputGroup label="Relationship" placeholder="Spouse / Child / Parent" />
                           </div>
                           
-                          {/* Sub-Identification Upload */}
+                          
                           <div className="space-y-2">
                              <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Identification Card</label>
                              <div className="border-2 border-dashed border-slate-200 rounded-2xl p-6 flex flex-col items-center justify-center bg-white hover:border-blue-400 transition cursor-pointer">
@@ -209,7 +209,7 @@ const App = () => {
                 </div>
               )}
 
-              {/* STEP 4: AUDIT */}
+              
               {step === 4 && (
                 <div className="animate-in zoom-in duration-500">
                   <h2 className="text-2xl font-bold mb-6">Integrity Audit</h2>
@@ -221,7 +221,7 @@ const App = () => {
                 </div>
               )}
 
-              {/* STEP 5: RECEIPT */}
+              
               {step === 5 && (
                 <div className="text-center py-12 animate-in zoom-in duration-500">
                   <div className="w-24 h-24 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner">
@@ -234,7 +234,7 @@ const App = () => {
               )}
             </div>
 
-            {/* SHARED FOOTER NAVIGATION */}
+            
             {!isAddingMember && (
               <div className="px-10 py-8 bg-slate-50 border-t border-slate-100 flex justify-between items-center">
                 {step > 1 ? (
